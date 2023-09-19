@@ -4,9 +4,6 @@ import cv2
 
 class LineTool(BaseTool):
     def draw(self, ix, iy, x, y):
-        # Define the starting and ending points of the line
-        print("started printing")
-        print(ix, iy, x, y)
         # Define the color of the line in BGR format (blue, green, red)
         color = (255, 255, 255)  # Red in this case
         # Define the thickness of the line
