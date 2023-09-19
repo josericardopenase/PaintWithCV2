@@ -1,8 +1,8 @@
-from .core.app import App
-from .ui.components import Button, Style, Toggle
-from .tools.line_tool import LineTool
-from .tools.rectangle_tool import RectangleTool
-from .tools.circle_tool import CircleTool
+from core.app import App
+from ui.components import Button, Style, Toggle
+from tools.line_tool import LineTool
+from tools.rectangle_tool import RectangleTool
+from tools.circle_tool import CircleTool
 
 app = App(800, 800)
 

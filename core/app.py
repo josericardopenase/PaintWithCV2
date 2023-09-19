@@ -7,7 +7,7 @@ from .managers.canvas_manager import CanvasManager
 
 
 class App:
-    window = 'App'
+    window = 'Drawing'
 
     def __init__(self, width, height):
         self.canvas = CanvasManager(width, height)
@@ -19,6 +19,8 @@ class App:
         self.tools.callbacks(*args)
     
     def run(self):
+        cv2.namedWindow('Drawing', cv2.WINDOW_FULLSCREEN)
+        cv2.setWindowProperty('Drawing', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         while True:
             self.ui.draw(self.canvas.ui)
             cv2.setMouseCallback(self.window, self.callbacks)
