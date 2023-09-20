@@ -13,6 +13,6 @@ class UIManager(BaseManager):
         for ui_element in self.ui_elements:
             ui_element.track(event, x, y, flags, param)
 
-    def draw(self, canvas):
+    def draw(self):
         for x in self.ui_elements:
-            x.draw(canvas)
+            x.draw(self.app.canvas.ui)

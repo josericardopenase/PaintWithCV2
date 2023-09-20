@@ -3,14 +3,13 @@ import numpy as np
 
 
 class CanvasManager(BaseManager):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-        self.ui = np.zeros((width, height, 3), dtype = np.uint8)
-        self.draw = np.zeros((width, height, 3), dtype = np.uint8)
-        self.temp = np.zeros((width, height, 3), dtype = np.uint8)
+    def __init__(self, app):
+        self.width = app.width
+        self.height = app.height
+        self.ui = np.zeros((self.width, self.height, 3), dtype = np.uint8)
+        self.draw = np.zeros((self.width, self.height, 3), dtype = np.uint8)
+        self.temp = np.zeros((self.width, self.height, 3), dtype = np.uint8)
     
-
     def save(self):
         self.draw += self.temp
 

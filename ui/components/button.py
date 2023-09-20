@@ -12,8 +12,7 @@ class Button(UI, Reactive):
     def set_active(self, value):
         self.is_active = value
     
-    def _draw_overlay(self, frame, img, length):
-        x, y, h, w = length
+    def _draw_overlay(self, frame, img):
         if self.is_active:
             self._default_color = self.style.active_color
         else:
@@ -21,10 +20,10 @@ class Button(UI, Reactive):
                 self._default_color = self.style.hover_color
             else:
                 self._default_color = self.style.color
-        cv2.rectangle(frame, (x, y), (h, w), self._default_color, -1)  # Borde negro
+        cv2.rectangle(frame, (self.position[0], self.position[1]), (self.position[0] + self.style.width, self.position[1] + self.style.height), self._default_color, -1)  # Borde negro
     
     def draw(self, frame):
-        self._draw_overlay(frame, self.img, self.position)
+        self._draw_overlay(frame, self.img)
 
 class Toggle(UI, Reactive):
     pass

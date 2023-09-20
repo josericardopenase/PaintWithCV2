@@ -3,11 +3,7 @@ import cv2
 
 class ToolManager(BaseManager):
     tool = None
-
-    def __init__(self, app) -> None:
-        self.app = app
-        self.tool = None
-        self.drawing = False
+    drawing = False
 
     def set_tool(self, tool):
         self.tool = tool(self.app.canvas.temp)
