@@ -1,6 +1,7 @@
 from .base_manager import BaseManager
 import cv2
 
+
 class ToolManager(BaseManager):
     tool = None
     drawing = False

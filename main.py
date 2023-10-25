@@ -14,7 +14,6 @@ bs = Style(
     height=50
 )
 
-
 gs = Style(
     flex_dir='col',
     flex_gap=10,
